@@ -15,6 +15,11 @@ print(my_tuple[2])
 print(my_tuple[3])
 print(my_tuple.count("Santiago"))
 
+my_tuple2 = ("Santiago","Joya",22,1.82,"Santiago")
+
+for element in my_tuple2:
+    print(element)
+
 # my_tuple[2] = 33
 # print(my_tuple) aqui es donde se ve que no se puede modificar una tupla y esa es la diferencia con las listas y las tuplas
 print("----------CONCATENADO DE TUPLAS----------")

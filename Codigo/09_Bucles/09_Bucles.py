@@ -10,6 +10,7 @@ my_condition = 0
 while my_condition < 11:
     print("El valor de la condición es:", my_condition)
     my_condition += 1#Incrementa en 1 el valor de la variable my_condition esto se llama contador
+    #my_condition = my_condition + 1#Otra forma de incrementar el valor de la variable my_condition
 
 print("Mensaje fuera del bucle while")
 
@@ -54,6 +55,31 @@ for i in frutas:
     if i == "Melon":
         print("\nLa fruta es:", i)
         break
+    
+frutas = ["Banana","Fresa","Melon","Uva","Melocoton"]
+for i in frutas:
+    if i == "Melon":
+        print("\nLa fruta es:", i)
+        continue
+    print("Fruta:", i)
+    
+animales = ["Perro","Gato","Conejo","Tortuga","Hamster"]
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for animales, numeros in zip(animales, numeros): #zip une dos listas en una tupla
+    print("Animal:", animales, "Numero:", numeros)
+    
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] #Imprimiendo la lista pero por su indiice
+
+for num in enumerate(numeros): #enumerate devuelve una tupla con el indice y el valor de la lista
+    print(num)
+    
+colores = {1: "Rojo", 
+           2: "Verde", 
+           3: "Azul"}
+
+for key, value in colores.items(): #items devuelve una tupla con el indice y el valor del diccionario
+    print("Key:", key, "Value:", value)
 
 print("----------ITERADOARES----------")    
 #El iterador es una variable que se utiliza para recorrer una secuencia como una lista
@@ -66,7 +92,7 @@ print(my_iterador.__next__()) #obtiene el primer elemento de la lista
 print(my_iterador.__next__())
 print(my_iterador.__next__())
 print(my_iterador.__next__())
-print(my_iterador.__next__())
+print(my_iterador.__next__()) 
 print(my_iterador.__next__(),"\n")
 
 text = "Hola"
@@ -84,7 +110,7 @@ for num in ood_iter:
     print(num)
     
 print("----------GENERADORES----------")
-#Los generadores son funciones que devuelven un iterador. Son muy útiles para crear
+#Los generadores son funciones que devuelven un iterador. Son muy útiles para crear secuencias de datos grandes o infinitas sin necesidad de almacenarlas en memoria.
 
 def my_generator():
     yield 1#Aqui le decimos lo que va a imprimir llamando al yield

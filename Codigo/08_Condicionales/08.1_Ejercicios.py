@@ -9,6 +9,7 @@ elif my_number < 0:
 else:
       print("El número es igual a cero")
 print("----------FIN----------")
+
 print("Ejercicio 2: Comprobar si un número es par o impar")
 my_number = int(input("Ingresa un número: "))
 if my_number % 2 == 0:

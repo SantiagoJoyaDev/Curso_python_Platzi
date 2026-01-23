@@ -17,6 +17,42 @@ numeros = [1,2,345,67,89,3,2]
 print("El numero", numeros[1] ,"esta repetido", numeros.count(2) , "veces")
 print("-----FIN-----\n")
 
+print("Ejercicio 4: Crea una lista y imprime la lista")
+numeros = [12,23,123,32,1]
+print("La lista de numeros es:", numeros)
+print("-----FIN-----\n")
+
+print("Ejercicio 5: Crea una lista de 4 colores cambia el segundo elemento o color y muestra el resultado")
+colores = ["Rojo","Azul","Verde","Amarillo"]
+print("Impresion sin el cambio", colores)
+colores.insert(1,"Naranja")
+colores.remove("Azul")
+print("Impresion con el cambio", colores)
+print("-----FIN-----\n")
+
+print("Ejercicio 6: Crear una lista con animales y usa insert,append y remove para modificar la lista.")
+animales = ["perro","gato","cocodrilo","caballo","cerdo"]
+print("Impresion sin el cambio", animales)
+animales.append("jirafa")
+animales.insert(2,"tigre")
+animales.remove("gato")
+print("Impresion con el cambio", animales)
+print("-----FIN-----\n")
+
+print("Ejercicio 7: Dada una lista de elementos imprime cuantos elementos tiene la lista y cuantas veces se repite un elemento específico.")
+nombres = ["luis","kathe","jonathan","angel","nicol","arian","kathe","kathe"]
+print("La lista tiene:",len(nombres),"elementos")
+print("El nombre kathe se repite:",nombres.count("kathe"),"veces")
+print("-----FIN-----\n")
+
+print("Ejercicio 8: Dada una lista de numeros usa el for para realizar la suma de los elementos que estan en la lista")
+numeros = [12,23,34,45,56]
+suma = 0
+for numero in numeros:
+      suma = suma + numero
+print("La suma de los numeros es:",suma)
+print("-----FIN-----\n")
+
 print("----------EJERCICIOS INTERMEDIO----------")
 print("Ejercicio 4: Crea una lista con los números del 1 al 5.Usa append para agregar el número 6."
       "Luego usa remove para eliminar el número 3."
@@ -89,6 +125,80 @@ print("la edad minima es:",min(edades))
 print("El promedio de las edades es",promedio)
 edades.sort()
 print("El orden de la lista de forma ascendente es",edades)
+
+print("-----FIN-----\n")
+
+print("Ejercicio 11: Dada una lista de numeros, crea ua nueva lista sin repetir elementos pero manteniendo el orden original de los elementos.")
+
+lista_original = [1,2,33,4,5,6,7,77,7,7,7,8,9,90,10,1,2,3,4,5]
+lista_sin_repetidos = []
+for numero in lista_original:
+    if numero not in lista_sin_repetidos:
+        lista_sin_repetidos.append(numero)
+
+print("Impresion lista original",lista_original)
+print("Impresion sin repetidos",lista_sin_repetidos)
+
+print("-----FIN-----\n")
+
+print("Ejercicio 12: Dada una lista de numeros enteros, regresa el segundo numero mayor sin que se use la funcion sort.")
+
+lista_original = [10, 34, 23, 67, 89, 90]
+maximo = float('-inf') #Asigna el valor mas bajo posible
+segundo_maximo = float('-inf') #Aqui tambien asigna el valor mas bajo posible
+
+for numero in lista_original:
+      if numero > maximo:
+            segundo_maximo = maximo
+            maximo = numero
+      elif numero > segundo_maximo and numero != maximo:
+            segundo_maximo = numero
+
+print("El segundo numero mayor es:", segundo_maximo)
+
+print("-----FIN-----\n")
+
+print("Ejercicio 13: Dada una lista de letras repetidas cuanta de cada letra cuanas veces aparece y muestra el resultado.")
+
+lista_letras_repetidas = ['a', 'b', 'c', 'a', 'b', 'a', 'd', 'e', 'c', 'b']
+lista_letras_repetidas.count('a')
+lista_letras_repetidas.count('b')
+lista_letras_repetidas.count('c')
+
+print("La letra 'a' aparece:", lista_letras_repetidas.count('a'), "veces.")
+print("La letra 'b' aparece:", lista_letras_repetidas.count('b'), "veces.")
+print("La letra 'c' aparece:", lista_letras_repetidas.count('c'), "veces.")
+
+print("-----FIN-----\n")
+
+print("Ejercicio 14: Dada una lista de numero el ultimo numero muevelo al inicio de la lista")
+
+lista_de_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ultimo_numero = lista_de_numeros.pop()  # Elimina y obtiene el último número
+lista_de_numeros.insert(0, 10)  # Inserta el último número al inicio de la lista
+
+print("Lista con el ultimo numero al inicio:", lista_de_numeros)
+
+print("-----FIN-----\n")
+
+print("Ejercicio 15: Dada una lista de frutas pregunta al usuario por una fruta y si la fruta existe muestrala. Si no existe, agrégala a la lista.")
+
+frutas = ["manzana", "banana", "cereza", "durazno"]
+fruta_usuario = input("Ingresa el nombre de una fruta: ")
+if fruta_usuario in frutas:
+      print("La fruta es:", fruta_usuario)
+else:
+      frutas.append(fruta_usuario)
+      print("Fruta agregada a la lista:", fruta_usuario)
+      print("La lista de frutas actualizada es:", frutas)
+
+print("-----FIN-----\n")
+
+print("Ejercicio 16: Dada una lista de números imprime cada elemento con index y valor.")
+
+numeros = [10, 20, 30, 40, 50]
+for index, valor in enumerate(numeros):#La función enumerate() agrega un contador a un iterable y lo devuelve en forma de objeto enumerado.
+      print(f"Índice: {index}, Valor: {valor}")
 
 print("-----FIN-----\n")
 

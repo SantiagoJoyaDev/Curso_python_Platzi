@@ -3,7 +3,7 @@ print("----------DICCIONARIOS----------")
 # Los diccionarios son una estructura de datos que nos permite almacenar valores de cualquier tipo, como enteros, cadenas, listas, tuplas, etc. y a diferencia de las tuplas y las listas   
 # que se acceden a través de un índice, los diccionarios se acceden a través de una clave y se definen mediante llaves {}.
 
-my_dict = ()
+my_dict = dict()
 my_other_dict = {}#los diccionarios se definen con llaves
 
 print(type(my_dict))
@@ -60,6 +60,3 @@ print(my_favorite_programming_languages_dict.values())# Obtener todos los valore
 print(my_favorite_programming_languages_dict.items())# Obtener todos los items del diccionario
 my_favorite_programming_languages_dict.clear()# Limpiar el diccionario
 print(my_favorite_programming_languages_dict)
-
-
-

@@ -29,12 +29,17 @@ print(my_other_lista[1])
 print(my_other_lista[-1])
 print(my_other_lista[-2])
 print(my_other_lista)
-print(my_other_lista.count(22))
+print(my_other_lista.count(22)) #El count sirve para contar cuantas veces se repite un elemento en la lista
 print(my_other_lista.count("joya"))
 
 edad1, estatura, nombre, apellido1, apellido2, edad2 = my_other_lista#como se igualo el numero de caracteres a la de la lista funciona
 #pero pues si hay al menos un dato menos no funciona porque tiene que tener el mismo tamano de la lista para poder hacer el print
-print(edad2)
+print(edad2,"\n")
+
+frutas = ["Naranja", "Mango", "Uva", "Fresa", "Piña"]
+for fruta in frutas:
+    print("Me gusta la fruta:", fruta)
+print(frutas)
 
 print("----------CONCATENADO DE LISTAS----------")
 
@@ -56,9 +61,9 @@ lista_1 = [1,2,3,4,5,5,5,5,5]
 print("-----COUNT-----")#Sirve para contar cuantos elementos repetidos del mismo caracter hay
 print("Cuantos numero 5 hay repetidos:",lista_1.count(5) , "funcion de COUNT implementado\n")
 
-print("-----MAYO O MENOR-----")#Sirve para limpiar la lista completa
-print("EL numero mayor de toda la lista es: ",max(lista_1))
-print("EL numero menor  de toda la lista es: ",min(lista_1))
+print("-----MAYO O MENOR-----")#Sirve para saber cual es el numero mayor o menor de toda la lista
+print("EL numero mayor de toda la lista es: ",max(lista_1), "funcion de MAX implementado")
+print("EL numero menor  de toda la lista es: ",min(lista_1),"funcion de MIN implementado\n")
 
 print("-----APPEND-----")#Sirve para agregar un caracter nuevo a la lista al final de la lista
 print("Aqui esta la respuesta con la funcion de APPEND imiplementado...",lista_1)
@@ -67,7 +72,7 @@ print(lista_1,"\n")
 
 print("-----INSERT-----")#Sirve para agregar un caracter pero en la posicion que yo quiera
 lista_1.insert(3,4)
-print("Aqui esta la respueta con la fucion de INSERT implementada",lista_1,"\n")
+print("Aqui esta la respueta con la fucion de INSERT implementada",lista_1,"\n")# con el 3,4 le digo que en la posicion 3 quiero agregar el numero 4
 
 print("-----REMOVE-----")#Sirve para remover cualquier caracter de la lista
 lista_1.remove(5)
